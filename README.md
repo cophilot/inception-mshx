@@ -5,5 +5,5 @@ This is a msh extension that adds additional scripts for using msh.
 ## Installation
 
 ```bash
-msh collection clone
+msh collection clone https://github.com/cophilot/mshx-inception.git
 ```
