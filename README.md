@@ -10,5 +10,5 @@
 ## Installation
 
 ```bash
-msh collection clone https://github.com/cophilot/mshx-inception.git
+mshx install cophilot/inception
 ```
