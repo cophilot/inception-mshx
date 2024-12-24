@@ -1,0 +1,19 @@
+#!/bin/bash
+#??Get the manual for a msh script
+#&&mshx,inception
+###Get the manual for a msh script
+###Usage 'msm <command-name>'
+
+if [ -z "$1" ]; then
+    echo "Please provide the name of the command"
+    echo "Run 'msm help' for more information"
+    exit 1
+fi
+
+if [ "$1" == "help" ]; then
+    msm msm
+    exit 0
+fi
+
+msh manual $1
+
