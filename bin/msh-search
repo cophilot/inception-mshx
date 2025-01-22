@@ -1,16 +1,18 @@
 #!/bin/bash
-#??Search for an msh script
-#&&msh-inception
-###Search for an msh script using grep
-###Usage: msh-search <pattern>
+#??Get the manual for a msh script
+#&&mshx,inception-mshx
+###Get the manual for a msh script
+###Usage: msm <script-name>
 
 if [ $# -ne 1 ]; then
     echo "Command takes exactly one argument"
-    echo "Help: msh-search -h"
+    echo "Help: msm -help"
+    exit 1
 fi
 
-if [ $1 == "-h" ] || [ $1 == "--help" ]; then
-    msm msh-search
+if [ $1 == "-h" ] || [ $1 == "-help" ]; then
+    msh manual msm
+    exit 0
 fi
 
-msh ls | grep $1
+msh ls -c | grep $1 --color=always

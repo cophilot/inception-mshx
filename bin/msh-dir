@@ -1,0 +1,13 @@
+#!/bin/bash
+#??Change to the myshell directory
+#&&mshx,inception-mshx
+###Change to the myshell directory
+
+if [ -z "$MSH_HOME" ]; then
+    echo "Please set the MSH_HOME environment variable"
+    exit 1
+fi
+
+cd $MSH_HOME
+
+exec $SHELL

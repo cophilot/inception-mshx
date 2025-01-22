@@ -1,16 +1,16 @@
 #!/bin/bash
 #??Get the manual for a msh script
-#&&mshx,inception
+#&&mshx,inception-mshx
 ###Get the manual for a msh script
 ###Usage 'msm <command-name>'
 
 if [ -z "$1" ]; then
     echo "Please provide the name of the command"
-    echo "Run 'msm help' for more information"
+    echo "Run 'msm -help' for more information"
     exit 1
 fi
 
-if [ "$1" == "help" ]; then
+if [ $1 == "-h" ] || [ $1 == "-help" ]; then
     msm msm
     exit 0
 fi
