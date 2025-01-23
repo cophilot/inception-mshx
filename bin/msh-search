@@ -1,8 +1,8 @@
 #!/bin/bash
-#??Get the manual for a msh script
+#??Search within the myshell scripts
 #&&mshx,inception-mshx
-###Get the manual for a msh script
-###Usage: msm <script-name>
+###Search within the myshell scripts
+###Usage: msh-search <pattern>
 
 if [ $# -ne 1 ]; then
     echo "Command takes exactly one argument"
