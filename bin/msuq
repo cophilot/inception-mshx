@@ -1,0 +1,5 @@
+#!/bin/bash
+#??Msh Sync Up Quiet
+#&&mshx,inception-mshx
+
+msh sync -up --q
