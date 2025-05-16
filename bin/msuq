@@ -1,5 +1,5 @@
 #!/bin/bash
-#??Msh Sync Up Quiet
+#??Msh Sync Up Quiet (and detached)
 #&&mshx,inception-mshx
 
-msh sync -up --q
+msh sync -up -detached --q
