@@ -4,15 +4,19 @@
 ###Search within the myshell scripts
 ###Usage: msh-search <pattern>
 
-if [ $# -ne 1 ]; then
-    echo "Command takes exactly one argument"
-    echo "Help: msm -help"
+if [ $# -le 1 ]; then
+    echo "Command 'msh-search' requires at least one argument."
+    echo "Help: msh-search -help"
     exit 1
 fi
 
 if [ $1 == "-h" ] || [ $1 == "-help" ]; then
-    msh manual msm
+    msh manual msh-search
     exit 0
 fi
 
-msh ls -c | grep $1 --color=always
+search_pattern=$1
+
+shift
+
+msh ls -c $@ | grep "$search_pattern" --color=always
