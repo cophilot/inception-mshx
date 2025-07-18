@@ -2,21 +2,22 @@
 #??Search within the myshell scripts
 #&&mshx,inception-mshx
 ###Search within the myshell scripts
-###Usage: msh-search <pattern>
+###Usage: msh-search <pattern> [flags]
+###Flags are optional and can be used to modify the list behavior.
 
-if [ $# -le 1 ]; then
+if [ $# -le 0 ]; then
     echo "Command 'msh-search' requires at least one argument."
     echo "Help: msh-search -help"
     exit 1
 fi
 
-if [ $1 == "-h" ] || [ $1 == "-help" ]; then
+if [ "$1" == "-h" ] || [ "$1" == "-help" ]; then
     msh manual msh-search
     exit 0
 fi
 
-search_pattern=$1
+search_pattern="$1"
 
 shift
 
-msh ls -c $@ | grep "$search_pattern" --color=always
+msh ls -c "$@" | grep "$search_pattern" --color=always
