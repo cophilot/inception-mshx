@@ -24,7 +24,7 @@ full_list=$(msh ls -c "$@")
 
 header=$(echo "$full_list" | head -n 2)
 
-output=$(echo "$full_list" | grep "$search_pattern" --color=always)
+output=$(echo "$full_list" | grep -i "$search_pattern" --color=always)
 
 if [ -z "$output" ]; then
     echo "No matches found for pattern '$search_pattern'."
