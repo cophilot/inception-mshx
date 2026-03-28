@@ -1,0 +1,23 @@
+#!/bin/bash
+#??Open the .myshell/.conf file in the quick editor
+#&&mshx,inception-mshx
+
+if [ -z "$MSH_HOME" ]; then
+    echo "Please set the MSH_HOME environment variable"
+    exit 1
+fi
+
+conf_file="$MSH_HOME/.conf"
+
+if [ ! -f "$conf_file" ]; then
+    echo "Configuration file not found at $conf_file"
+    exit 1
+fi
+
+conf_content=$(cat "$conf_file")
+editor_command=$(echo "$conf_content" | grep -E "^quick_editor_command=" | cut -d'=' -f2-)
+if [ -z "$editor_command" ]; then
+    editor_command="vi"
+fi
+
+$editor_command "$conf_file"
