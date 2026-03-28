@@ -1,7 +1,6 @@
 #!/bin/bash
 #??Search within the myshell scripts
 #&&mshx,inception-mshx
-###Search within the myshell scripts
 ###Usage: msh-search <pattern> [flags]
 ###Flags are optional and can be used to modify the list behavior.
 

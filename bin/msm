@@ -1,7 +1,6 @@
 #!/bin/bash
 #??Get the manual for a msh script
 #&&mshx,inception-mshx
-###Get the manual for a msh script
 ###Usage 'msm <command-name>'
 
 if [ -z "$1" ]; then
